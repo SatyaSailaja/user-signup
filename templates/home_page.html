@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h1>Signup</h1>
+        <form action="/" method="post">
+           <table>
+              <tr>
+                  <td><label for ="username">Username</label></td>
+                  <td><input name="username" type="text" value ="{{username}}"/></td>
+                  <td><span class="error">{{username_error}}</span></td>
+              </tr>
+              <tr>
+                 <td><label for ="password">Password</label></td>
+                 <td><input name="password" type="password" value="{{password}}"/></td>
+                 <td><span class="error">{{password_error}}</span></td>
+              </tr>
+              <tr>
+                 <td><label for ="verifyPassword">Verify Password</label></td>
+                 <td><input name="verifyPassword" type="password" value="{{verifyPassword}}"/></td>
+                 <td><span class="error">{{verifyPassword_error}}</span></td>
+              </tr>
+              <tr>
+                 <td><label for ="email">Email (optional)</label></td>
+                 <td><input name="email"  value="{{email}}" /></td>
+                 <td><span class="error">{{email_error}}</span></td>
+              </tr>
+           </table>  
+           <br>
+           <input type = "submit"/>
+        </form>
+{% endblock %}
